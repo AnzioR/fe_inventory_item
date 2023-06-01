@@ -258,7 +258,8 @@ function DropDown({ direction, ...args }) {
   //   };
   // }, [loginData.store_id]);
   useEffect(() => {
-    const eventSource = new EventSource(`http://localhost:8080/notifications/expiration?store_id=${loginData.store_id}`);
+    // const eventSource = new EventSource(`http://localhost:8080/notifications/expiration?store_id=${loginData.store_id}`);
+    const eventSource = new EventSource(`http://43.202.9.215:8080/notifications/expiration?store_id=${loginData.store_id}`);
 
     eventSource.onmessage = (event) => {
       const newMessage = JSON.parse(event.data);

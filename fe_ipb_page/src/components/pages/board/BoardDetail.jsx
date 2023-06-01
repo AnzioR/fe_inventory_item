@@ -101,7 +101,8 @@ function BoardDetail() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/board/detail?id=${id}`)
+    // fetch(`http://localhost:8080/board/detail?id=${id}`)
+    fetch(`http://43.202.9.215:8080/board/detail?id=${id}`)
       .then(res => res.json())
       .then(data => {
         setBoard(data);
@@ -111,7 +112,8 @@ function BoardDetail() {
   }, [id]);
 
   const handleDelete = () => {
-    fetch(`http://localhost:8080/board/delete?id=${id}`, {
+    // fetch(`http://localhost:8080/board/delete?id=${id}`, {
+    fetch(`http://43.202.9.215:8080/board/delete?id=${id}`, {
       method: 'DELETE',
     })
       .then(() => {
