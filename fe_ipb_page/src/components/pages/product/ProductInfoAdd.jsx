@@ -8,8 +8,8 @@ function ProductInfoAdd() {
   const navigate = useNavigate();
 
   const onFinish = (values) => {
-    const url_be = "http://localhost:8080/productInfo/add";
-    // const url_be = "http://43.202.9.215:8080/product/add";
+    // const url_be = "http://localhost:8080/productInfo/add";
+    const url_be = "http://43.202.9.215:8080/productInfo/add";
 
     axios(url_be,
       {

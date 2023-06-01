@@ -31,7 +31,7 @@ function OrdersList() {
 
   // const url_be = `http://localhost:8080/orders/select-store-orders/${loginData.store_id}`;
   // const url_be = `http://localhost:8080/orders/select-store-orders/${loginData.store_id}`;
-  const url_be = `http://localhost:8080/orders/store-orders-date/${loginData.store_id}`;
+  const url_be = `http://43.202.9.215:8080/orders/select-store-orders/${loginData.store_id}`;
 
   const fetchStoreOrdersDetailData = () => {
     axios(url_be, {
@@ -44,7 +44,8 @@ function OrdersList() {
       .catch((err) => console.log("storeexp/err", err))
   }
 
-  const url_be_detail_list = `http://localhost:8080/orders/store-orders-detail-list`;
+  const url_be_detail_list = `http://43.202.9.215:8080/orders/store-orders-detail-list`;
+  // const url_be_detail_list = `http://localhost:8080/orders/store-orders-detail-list`;
   //const url_be_detail_list = `http://localhost:8080/orders/store-orders-detail-list?store_id=${loginData.store_id}&orders_date=${storeOrdersDetailData.orders_date}`;
 
   // const fetchStoreOrdersDetailListData = () => {

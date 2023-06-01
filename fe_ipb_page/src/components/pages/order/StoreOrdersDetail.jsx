@@ -22,7 +22,8 @@ function StoreOrdersDetail(props) {
   const orders_date = props.selectedId
   console.log("const orders_date", orders_date);
 
-   const url_be_detail_list = `http://localhost:8080/orders/store-orders-detail-list`;
+  const url_be_detail_list = `http://43.202.9.215:8080/orders/store-orders-detail-list`;
+  // const url_be_detail_list = `http://localhost:8080/orders/store-orders-detail-list`;
   //const url_be_detail_list = `http://localhost:8080/orders/store-orders-detail-list?store_id=${loginData.store_id}&orders_date=${orders_date}`;
 
   const getFeData = { store_id:loginData.store_id, orders_date: orders_date }

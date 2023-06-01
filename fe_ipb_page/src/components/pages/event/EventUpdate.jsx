@@ -27,8 +27,8 @@ const EventUpdate = () => {
   const onFinish = async (values) => {
 
     try {
-      await fetch(`http://localhost:8080/Event/update`, {
-        // await fetch(`http://43.202.9.215:8080/board/update`, {
+      // await fetch(`http://localhost:8080/Event/update`, {
+        await fetch(`http://43.202.9.215:8080/Event/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -56,8 +56,8 @@ const EventUpdate = () => {
   
   const deleteEvent = async () => {
     try {
-        await fetch(`http://localhost:8080/event/delete?id=${id}`, {
-    //   await fetch(`http://43.202.9.215:8080/board/delete?id=${id}`, {
+        // await fetch(`http://localhost:8080/event/delete?id=${id}`, {
+      await fetch(`http://43.202.9.215:8080/event/delete?id=${id}`, {
         method: 'DELETE',
       });
       message.success('게시판이 삭제되었습니다.');

@@ -40,7 +40,8 @@ function Cart(props) {
 
 
   const fetchCartData = () => {
-    const url_be_cartlist = `http://localhost:8080/cart/cartlist/${logInData.store_id}`;
+    // const url_be_cartlist = `http://localhost:8080/cart/cartlist/${logInData.store_id}`;
+    const url_be_cartlist = `http://43.202.9.215:8080/cart/cartlist/${logInData.store_id}`;
 
     axios(url_be_cartlist, {
       method: 'get'
@@ -82,7 +83,8 @@ function Cart(props) {
 
   const handleDeleteCart = async (id) => {
     try {
-      await fetch(`http://localhost:8080/cart/delete/${id}`, {
+      // await fetch(`http://localhost:8080/cart/delete/${id}`, {
+        await fetch(`http://43.202.9.215:8080/cart/delete/${id}`, {
         method: 'DELETE',
       });
       // fetchData();
@@ -93,8 +95,8 @@ function Cart(props) {
   };
 
   const handleAddOrder = (id) => {
-    const url_be_addorder = "http://localhost:8080/orders/addorder";
-    // const url_be = "http://43.202.9.215:8080/orders/addorder";
+    // const url_be_addorder = "http://localhost:8080/orders/addorder";
+    const url_be_addorder = "http://43.202.9.215:8080/orders/addorder";
 
     axios(url_be_addorder,
       {
@@ -159,8 +161,8 @@ function Cart(props) {
   // }
 
   const updateQnt = (tarId, tarQnt) => {
-    const url_be_updateQnt = "http://localhost:8080/cart/update";
     // const url_be_updateQnt = "http://localhost:8080/cart/update";
+    const url_be_updateQnt = "http://43.202.9.215:8080/cart/update";
 
     axios(url_be_updateQnt,
       {
