@@ -18,11 +18,9 @@ import user05 from "../assets/images/users/user05.jpg";
 import { logInState } from "../components/state/loginState";
 import { weatherState } from "../components/state/weatherState";
 import { useRecoilState, useRecoilValue } from 'recoil';
-//import { useRecoilValue } from 'recoil';
-// import { Navigate } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { message } from "antd";
+import { message, Modal} from "antd";
 import  style from "./HeaderTop.module.css"
 import { 
   RiLogoutBoxRLine, 
@@ -35,8 +33,18 @@ import {
 import { HiOutlineBell } from "react-icons/hi";
 import todayData from '../components/globalFunction/todayData';
 import CurrentDate from '../components/globalFunction/CurrentDate';
+import MyModal from '../components/sse/MyModal';
+import DropDown from '../components/sse/DropDown';
 
-
+// function MyModal() {
+//   return (
+//     <div className="modal">
+//       <h2>제목</h2>
+//       <p>날짜</p>
+//       <p>상세 내용</p>
+//     </div>
+//   );
+// }
 
 const HeaderTop = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -44,6 +52,7 @@ const HeaderTop = () => {
 
   const navigate = useNavigate();
   
+
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const Handletoggle = () => {
     setIsOpen(!isOpen);
@@ -51,7 +60,6 @@ const HeaderTop = () => {
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
   };
-
   const logOut = () => {
     setLogInData({
       isLogIn: false
@@ -190,8 +198,10 @@ const HeaderTop = () => {
     }
   };
 
+
   return (
-    <Navbar color="primary" dark expand="md" className={"navbar-custom bg-secondary"} >
+    // <Navbar color="primary" dark expand="md" className={"navbar-custom bg-secondary"} >
+    <Navbar color="primary" dark expand="md" className={"navbar-custom smaller-navbar "} >
       <div className="d-flex align-items-center">
         {/* <NavbarBrand href="/" className="d-lg-none">
           <LogoWhite />
@@ -219,7 +229,6 @@ const HeaderTop = () => {
           )}
         </Button>
       </div>
-
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
           <div className={style.leftTab}>
@@ -254,11 +263,10 @@ const HeaderTop = () => {
           </NavItem>
 
           <NavItem>
-            <Link to="/starter" className="nav-link">
-              <HiOutlineBell /> 
-            </Link>
+            <div id='classDrop'>
+                <DropDown />
+            </div>
           </NavItem>
-
           <NavItem>
             {
             logInData.isLogIn ?   
@@ -296,5 +304,6 @@ const HeaderTop = () => {
     </Navbar>
   );
 };
+
 
 export default HeaderTop;

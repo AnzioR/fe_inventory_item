@@ -2,6 +2,7 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 15px;
+  background-color: white;
 }
 
 .table th,
@@ -26,15 +27,13 @@
   text-align: center;
 }
 
-.table th:last-child {
+/* .table th:last-child {
   text-align: left;
 
-}
-
-
+} */
 
 .table tbody tr:hover {
-  background-color: #FAFAFA;
+  background-color: #f8f7fa;
 }
 
 .exp-column {

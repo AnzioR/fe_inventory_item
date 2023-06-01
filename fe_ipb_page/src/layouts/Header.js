@@ -29,9 +29,9 @@ const Header = () => {
     // <div className={style.divHeader}>
     // <div className={`${style.divHeader} ${style.navbarCustom} ${style.bgSecondary}`}>
     <div className={`${style.divHeader} ${style.navbarCustom}`}>
-      <Container>
 
-      <Navbar color="primary" dark expand="md">
+
+      <Navbar dark expand="md">
       <div className="d-flex align-items-center">
         <NavbarBrand href="/" className="d-lg-none">
           {/* <LogoWhite /> */}
@@ -140,6 +140,9 @@ const Header = () => {
               <DropdownItem>
               <Link to="/event">이벤트</Link>
               </DropdownItem>
+              <DropdownItem>
+              <Link to="/sse">sse Test pages</Link>
+              </DropdownItem>
               <DropdownItem>Option 2</DropdownItem>
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>
@@ -182,7 +185,6 @@ const Header = () => {
       </Nav>
       </Collapse>
     </Navbar>
-      </Container>
     </div>
 
   );
